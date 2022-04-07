@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "akZyzpDsboDzLSZ433VliUyK7PP5jmyU+01O+Z4BWrJynD4QVb7SUsa/VnrvJt3lWDXx0R29VLEyPFjHylGeZg==",
+  "dgSpecHash": "00O4wgTVn7crmCIda0vzNV3gmmrbmsDSDYB3sM21+HhEhN7rHPmLwH3Fgx6JUwb+ycvI2SFOWI/OzPhIw+QY+g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\cghuf.LAPTOP-4QDOK7P3\\Source\\Repos\\MIS_4663_AF_FieldProject\\American_Fidelity\\American_Fidelity\\American_Fidelity.csproj",
+  "projectFilePath": "C:\\Users\\cghuf.LAPTOP-4QDOK7P3\\source\\repos\\MIS_4663_AF_FieldProject\\American_Fidelity\\American_Fidelity\\American_Fidelity.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cghuf.LAPTOP-4QDOK7P3\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.13\\microsoft.netcore.app.host.win-x64.5.0.13.nupkg.sha512"
   ],
