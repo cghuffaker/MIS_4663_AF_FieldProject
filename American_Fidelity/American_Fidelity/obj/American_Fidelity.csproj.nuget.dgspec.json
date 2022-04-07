@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cghuf.LAPTOP-4QDOK7P3\\source\\repos\\MIS_4663_AF_FieldProject\\American_Fidelity\\American_Fidelity\\American_Fidelity.csproj": {}
+    "C:\\Users\\cghuf.LAPTOP-4QDOK7P3\\Source\\Repos\\MIS_4663_AF_FieldProject\\American_Fidelity\\American_Fidelity\\American_Fidelity.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cghuf.LAPTOP-4QDOK7P3\\source\\repos\\MIS_4663_AF_FieldProject\\American_Fidelity\\American_Fidelity\\American_Fidelity.csproj": {
+    "C:\\Users\\cghuf.LAPTOP-4QDOK7P3\\Source\\Repos\\MIS_4663_AF_FieldProject\\American_Fidelity\\American_Fidelity\\American_Fidelity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cghuf.LAPTOP-4QDOK7P3\\source\\repos\\MIS_4663_AF_FieldProject\\American_Fidelity\\American_Fidelity\\American_Fidelity.csproj",
+        "projectUniqueName": "C:\\Users\\cghuf.LAPTOP-4QDOK7P3\\Source\\Repos\\MIS_4663_AF_FieldProject\\American_Fidelity\\American_Fidelity\\American_Fidelity.csproj",
         "projectName": "American_Fidelity",
-        "projectPath": "C:\\Users\\cghuf.LAPTOP-4QDOK7P3\\source\\repos\\MIS_4663_AF_FieldProject\\American_Fidelity\\American_Fidelity\\American_Fidelity.csproj",
+        "projectPath": "C:\\Users\\cghuf.LAPTOP-4QDOK7P3\\Source\\Repos\\MIS_4663_AF_FieldProject\\American_Fidelity\\American_Fidelity\\American_Fidelity.csproj",
         "packagesPath": "C:\\Users\\cghuf.LAPTOP-4QDOK7P3\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cghuf.LAPTOP-4QDOK7P3\\source\\repos\\MIS_4663_AF_FieldProject\\American_Fidelity\\American_Fidelity\\obj\\",
+        "outputPath": "C:\\Users\\cghuf.LAPTOP-4QDOK7P3\\Source\\Repos\\MIS_4663_AF_FieldProject\\American_Fidelity\\American_Fidelity\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\cghuf.LAPTOP-4QDOK7P3\\AppData\\Roaming\\NuGet\\NuGet.Config",

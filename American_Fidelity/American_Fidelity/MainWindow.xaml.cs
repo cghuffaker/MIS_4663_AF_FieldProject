@@ -24,5 +24,10 @@ namespace American_Fidelity
         {
             InitializeComponent();
         }
+
+        private void lst_Attributes_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

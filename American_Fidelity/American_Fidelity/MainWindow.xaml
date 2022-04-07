@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <ListBox x:Name="lst_Attributes" HorizontalAlignment="Left" Height="225" Margin="400,179,0,0" VerticalAlignment="Top" Width="370" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="lst_Attributes_SelectionChanged"/>
 
     </Grid>
 </Window>
