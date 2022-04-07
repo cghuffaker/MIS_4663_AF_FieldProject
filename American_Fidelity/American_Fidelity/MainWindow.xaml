@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ListBox x:Name="lst_Attributes" HorizontalAlignment="Left" Height="225" Margin="400,179,0,0" VerticalAlignment="Top" Width="370" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="lst_Attributes_SelectionChanged"/>
+        <ListBox x:Name="lst_Softwares" HorizontalAlignment="Left" Height="225" Margin="400,179,0,0" VerticalAlignment="Top" Width="370" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="lst_Attributes_SelectionChanged"/>
+        <Label Content="Softwares" HorizontalAlignment="Left" Height="25" Margin="405,134,0,0" VerticalAlignment="Top" Width="180"/>
 
     </Grid>
 </Window>
