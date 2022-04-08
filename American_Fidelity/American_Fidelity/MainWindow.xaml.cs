@@ -23,6 +23,7 @@ namespace American_Fidelity
         public MainWindow()
         {
             InitializeComponent();
+
         }
 
         private void lst_Attributes_SelectionChanged(object sender, SelectionChangedEventArgs e)
