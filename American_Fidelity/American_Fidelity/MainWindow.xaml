@@ -8,13 +8,13 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <ListBox x:Name="lst_Softwares" HorizontalAlignment="Left" Height="225" Margin="400,179,0,0" VerticalAlignment="Top" Width="370"/>
-        <Label Content="Softwares" HorizontalAlignment="Left" Height="25" Margin="400,146,0,0" VerticalAlignment="Top" Width="180" IsEnabled="False"/>
-        <ListBox x:Name="lst_Terms" HorizontalAlignment="Left" Height="221" Margin="240,181,0,0" VerticalAlignment="Top" Width="130" d:ItemsSource="{d:SampleData ItemCount=5}"/>
-        <Label Content="Selected Terms" HorizontalAlignment="Left" Height="40" Margin="240,146,0,0" VerticalAlignment="Top" Width="130" IsEnabled="False"/>
+        <Label Content="Softwares" HorizontalAlignment="Left" Height="25" Margin="400,146,0,0" VerticalAlignment="Top" Width="370" IsEnabled="False"/>
+        <ListBox x:Name="lst_Terms" HorizontalAlignment="Left" Height="221" Margin="240,181,0,0" VerticalAlignment="Top" Width="155" SelectionChanged="lst_Terms_SelectionChanged"/>
+        <Label Content="Selected Terms" HorizontalAlignment="Left" Height="40" Margin="240,146,0,0" VerticalAlignment="Top" Width="155" IsEnabled="False"/>
         <Button x:Name="btn_Search" Content="Search" HorizontalAlignment="Left" Height="50" Margin="60,39,0,0" VerticalAlignment="Top" Width="120"/>
         <Label Content="Filter" HorizontalAlignment="Left" Height="28" Margin="30,123,0,0" VerticalAlignment="Top" Width="180" IsEnabled="False"/>
-        <ListBox x:Name="lst_Filter" HorizontalAlignment="Left" Height="223" Margin="20,179,0,0" VerticalAlignment="Top" Width="200" d:ItemsSource="{d:SampleData ItemCount=5}"/>
-        <TextBox x:Name="txt_FilterTerms" HorizontalAlignment="Left" Height="30" Margin="20,151,0,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="200"/>
+        <ListBox x:Name="lst_Filter" HorizontalAlignment="Left" Height="223" Margin="20,179,0,0" VerticalAlignment="Top" Width="200" SelectionChanged="lst_Filter_SelectionChanged"/>
+        <TextBox x:Name="txt_FilterTerms" HorizontalAlignment="Left" Height="30" Margin="20,151,0,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="200" GotMouseCapture="Search"/>
 
     </Grid>
 </Window>
