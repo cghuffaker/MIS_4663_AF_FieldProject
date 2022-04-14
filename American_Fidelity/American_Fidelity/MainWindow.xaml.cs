@@ -22,6 +22,7 @@ namespace American_Fidelity
     public partial class MainWindow : Window
     {
         private List<Software> softwareList = new List<Software>();
+        private List<MTerms> termsList = new List<MTerms>();
         public MainWindow()
         {
             InitializeComponent();
@@ -38,8 +39,8 @@ namespace American_Fidelity
             for (int i = 1; i < ReadingFile.Length; i++)
             {
                 MTerms Terms = new MTerms(ReadingFile[i], i);
-
-               lst_Filter.Items.Add(Terms.Software_Function);
+                termsList.Add(Terms);
+                lst_Filter.Items.Add(termsList[i-1]);
             }
 
             //private void lst_Attributes_SelectionChanged(object sender, SelectionChangedEventArgs e)

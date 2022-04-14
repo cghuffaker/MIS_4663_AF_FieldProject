@@ -20,5 +20,9 @@ namespace American_Fidelity
             string[] term = type.Split(',');
             Software_Function = term[0];
         }
+        public override string ToString()
+        {
+            return Software_Function;
+        }
     }
 }
