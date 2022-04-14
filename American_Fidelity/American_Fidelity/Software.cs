@@ -52,5 +52,9 @@ namespace American_Fidelity
             Link_1 = pieces[7];
 
         }
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

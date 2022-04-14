@@ -21,6 +21,7 @@ namespace American_Fidelity
     /// </summary>
     public partial class MainWindow : Window
     {
+        private List<Software> softwareList = new List<Software>();
         public MainWindow()
         {
             InitializeComponent();
@@ -29,8 +30,8 @@ namespace American_Fidelity
             for (int i = 1; i < linesOfFile.Length; i++)
             {
                 Software entries = new Software(linesOfFile[i], i);
-
-                lst_Softwares.Items.Add(entries.Name);
+                softwareList.Add(entries);
+                lst_Softwares.Items.Add(softwareList[i - 1]);
             }
             string[] ReadingFile = File.ReadAllLines("American Fidelity_SoftwareFunctionList.csv");
 
