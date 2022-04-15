@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cghuf.LAPTOP-4QDOK7P3\\source\\repos\\MIS_4663_AF_FieldProject\\American_Fidelity\\American_Fidelity\\American_Fidelity.csproj": {}
+    "C:\\Users\\Schaeffer Schmidt\\Source\\Repos\\MIS_4663_AF_FieldProject\\American_Fidelity\\American_Fidelity\\American_Fidelity.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cghuf.LAPTOP-4QDOK7P3\\source\\repos\\MIS_4663_AF_FieldProject\\American_Fidelity\\American_Fidelity\\American_Fidelity.csproj": {
+    "C:\\Users\\Schaeffer Schmidt\\Source\\Repos\\MIS_4663_AF_FieldProject\\American_Fidelity\\American_Fidelity\\American_Fidelity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cghuf.LAPTOP-4QDOK7P3\\source\\repos\\MIS_4663_AF_FieldProject\\American_Fidelity\\American_Fidelity\\American_Fidelity.csproj",
+        "projectUniqueName": "C:\\Users\\Schaeffer Schmidt\\Source\\Repos\\MIS_4663_AF_FieldProject\\American_Fidelity\\American_Fidelity\\American_Fidelity.csproj",
         "projectName": "American_Fidelity",
-        "projectPath": "C:\\Users\\cghuf.LAPTOP-4QDOK7P3\\source\\repos\\MIS_4663_AF_FieldProject\\American_Fidelity\\American_Fidelity\\American_Fidelity.csproj",
-        "packagesPath": "C:\\Users\\cghuf.LAPTOP-4QDOK7P3\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cghuf.LAPTOP-4QDOK7P3\\source\\repos\\MIS_4663_AF_FieldProject\\American_Fidelity\\American_Fidelity\\obj\\",
+        "projectPath": "C:\\Users\\Schaeffer Schmidt\\Source\\Repos\\MIS_4663_AF_FieldProject\\American_Fidelity\\American_Fidelity\\American_Fidelity.csproj",
+        "packagesPath": "C:\\Users\\Schaeffer Schmidt\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Schaeffer Schmidt\\Source\\Repos\\MIS_4663_AF_FieldProject\\American_Fidelity\\American_Fidelity\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\cghuf.LAPTOP-4QDOK7P3\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Schaeffer Schmidt\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -49,12 +49,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[5.0.13, 5.0.13]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -63,7 +57,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

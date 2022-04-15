@@ -6,8 +6,8 @@
       "version": "5.0.0"
     },
     "additionalProbingPaths": [
-      "C:\\Users\\cghuf.LAPTOP-4QDOK7P3\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\cghuf.LAPTOP-4QDOK7P3\\.nuget\\packages"
+      "C:\\Users\\Schaeffer Schmidt\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Schaeffer Schmidt\\.nuget\\packages"
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true

@@ -40,7 +40,7 @@ namespace American_Fidelity
             {
                 MTerms Terms = new MTerms(ReadingFile[i], i);
                 termsList.Add(Terms);
-                lst_Filter.Items.Add(termsList[i-1]);
+                lst_Filter.Items.Add(termsList[i-1].ToString().ToLower());
             }
 
             //private void lst_Attributes_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -50,6 +50,7 @@ namespace American_Fidelity
 
         private void lst_Filter_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+           
                 
                 if (lst_Terms.Items.Contains(lst_Filter.SelectedItem))//checks to see if the item being selected is already in the list of sorted items
                 {
@@ -57,9 +58,11 @@ namespace American_Fidelity
                 }
                 else
                 {
-                    string movement = lst_Filter.SelectedItem.ToString();
-                    lst_Terms.Items.Add(movement);
-                }
+               
+                   //lst_Filter.SelectedItem.ToString();
+                   //termsList.Add(lst_Filter.SelectedItem.ToString(););
+                   //lst_Terms.Items.Add(movement);
+            }
 
                  
         
@@ -76,6 +79,19 @@ namespace American_Fidelity
         private void Search(object sender, MouseEventArgs e)
         {
             txt_FilterTerms.Text = "";
+        }
+
+        private void TypeSearch(object sender, TextChangedEventArgs e)
+        {
+            lst_Filter.Items.Clear();
+            foreach(var listTerms in termsList)
+            {
+                if (listTerms.ToString().ToLower().Contains(txt_FilterTerms.Text))
+                {
+                    lst_Filter.Items.Add(listTerms.ToString().ToLower());
+                }
+            }
+            
         }
     }
 }

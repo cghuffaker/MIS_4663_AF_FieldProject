@@ -14,7 +14,7 @@
         <Button x:Name="btn_Search" Content="Search" HorizontalAlignment="Left" Height="50" Margin="60,39,0,0" VerticalAlignment="Top" Width="120"/>
         <Label Content="Filter" HorizontalAlignment="Left" Height="28" Margin="30,123,0,0" VerticalAlignment="Top" Width="180" IsEnabled="False"/>
         <ListBox x:Name="lst_Filter" HorizontalAlignment="Left" Height="223" Margin="20,179,0,0" VerticalAlignment="Top" Width="200" SelectionChanged="lst_Filter_SelectionChanged"/>
-        <TextBox x:Name="txt_FilterTerms" HorizontalAlignment="Left" Height="30" Margin="20,151,0,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="200" GotMouseCapture="Search"/>
+        <TextBox x:Name="txt_FilterTerms" HorizontalAlignment="Left" Height="30" Margin="20,151,0,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="200" GotMouseCapture="Search" TextChanged="TypeSearch"/>
 
     </Grid>
 </Window>
