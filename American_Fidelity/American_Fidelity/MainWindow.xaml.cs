@@ -23,6 +23,7 @@ namespace American_Fidelity
     {
         private List<Software> softwareList = new List<Software>();
         private List<MTerms> termsList = new List<MTerms>();
+      
         public MainWindow()
         {
             InitializeComponent();
@@ -50,19 +51,24 @@ namespace American_Fidelity
 
         private void lst_Filter_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            
            
-                
-                if (lst_Terms.Items.Contains(lst_Filter.SelectedItem))//checks to see if the item being selected is already in the list of sorted items
+            if (lst_Terms.Items.Contains(lst_Filter.SelectedItem))//checks to see if the item being selected is already in the list of sorted items
                 {
                 //Messagebox wasnt working...
                 }
                 else
                 {
+               FilterArray filterArray = new FilterArray();
+                filterArray.Equals(lst_Filter.SelectedItem);
+                lst_Terms.Items.Add(filterArray.ToString());
+               // savedTerms.Add(lst_Filter.SelectedItem.ToString().ToLower());
+               // lst_Terms.Items.Add(savedTerms[lst_Filter.SelectedIndex].ToString().ToLower());
                
                    //lst_Filter.SelectedItem.ToString();
                    //termsList.Add(lst_Filter.SelectedItem.ToString(););
                    //lst_Terms.Items.Add(movement);
-            }
+                }
 
                  
         
@@ -74,6 +80,7 @@ namespace American_Fidelity
         {
            
             lst_Terms.Items.Remove(lst_Terms.SelectedItem);//removes selected item from the terms section.
+            
         }
 
         private void Search(object sender, MouseEventArgs e)
