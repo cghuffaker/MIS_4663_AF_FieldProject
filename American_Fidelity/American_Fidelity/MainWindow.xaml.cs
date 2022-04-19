@@ -21,6 +21,7 @@ namespace American_Fidelity
     /// </summary>
     public partial class MainWindow : Window
     {
+        private List<AmericanFInfo> americanF = new List<AmericanFInfo>();
         public MainWindow()
         {
             InitializeComponent();
@@ -30,18 +31,24 @@ namespace American_Fidelity
             for (int i = 1; i < linesOfFile.Length; i++)
             {
                 AmericanFInfo entries = new AmericanFInfo(linesOfFile[i], i);
-                lst_Softwares.Items.Add(entries.Software.ToString().ToLower());
+                americanF.Add(entries);
+
+
+                lst_Softwares.Items.Add(entries.Software);
                 if (!lst_Filter.Items.Contains(entries.produced_by))
                 {
-                    lst_Filter.Items.Add(entries.produced_by.ToString().ToLower());
+
+                    lst_Filter.Items.Add(entries.produced_by);
                 }
                 if (!lst_Filter.Items.Contains(entries.most_broad_definition))
                 {
-                    lst_Filter.Items.Add(entries.most_broad_definition.ToString().ToLower());
+
+                    lst_Filter.Items.Add(entries.most_broad_definition);
                 }
                 if (!lst_Filter.Items.Contains(entries.verb))
                 {
-                    lst_Filter.Items.Add(entries.verb.ToString().ToLower());
+
+                    lst_Filter.Items.Add(entries.verb);
                 }
 
             }
@@ -56,8 +63,7 @@ namespace American_Fidelity
         }
         private void lst_Terms_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            //string remove = lst_Terms.SelectedItem.ToString().ToLower();
-            //lst_Terms.Items.Remove(remove);
+            lst_Terms.Items.Remove(lst_Terms.SelectedItem);
         }
         private void Search(object sender, MouseEventArgs e)
         {
@@ -67,7 +73,40 @@ namespace American_Fidelity
         private void btn_Search_Click(object sender, RoutedEventArgs e)
         {
             lst_Softwares.Items.Clear();
-            //if()
+
+
+            foreach (var entry in americanF)
+            {
+                Boolean check = true;
+                foreach (var term in lst_Terms.Items)
+                {
+                    if (entry.produced_by.Contains(term.ToString()) || entry.most_broad_definition.Contains(term.ToString()) || entry.verb.Contains(term.ToString()))
+                    {
+
+
+
+
+                    }
+                    else
+                    {
+                        check = false;
+                    }
+
+
+
+
+                }
+                if (check == true)
+                {
+                    if (!lst_Softwares.Items.Contains(entry.Software))
+                    {
+                        lst_Softwares.Items.Add(entry.Software);
+                    }
+                }
+
+            }
+
+
         }
     }
 }
