@@ -21,84 +21,54 @@ namespace American_Fidelity
     /// </summary>
     public partial class MainWindow : Window
     {
-        private List<Software> softwareList = new List<Software>();
-        private List<MTerms> termsList = new List<MTerms>();
-      
         public MainWindow()
         {
             InitializeComponent();
-            string[] linesOfFile = File.ReadAllLines("ARIS_SoftwareCatalog_OUProject.csv");
+
+            string[] linesOfFile = File.ReadAllLines("AmericanFidelityInfo.csv");
 
             for (int i = 1; i < linesOfFile.Length; i++)
             {
-                Software entries = new Software(linesOfFile[i], i);
-                softwareList.Add(entries);
-                lst_Softwares.Items.Add(softwareList[i - 1]);
-            }
-            string[] ReadingFile = File.ReadAllLines("American Fidelity_SoftwareFunctionList.csv");
+                AmericanFInfo entries = new AmericanFInfo(linesOfFile[i], i);
+                lst_Softwares.Items.Add(entries.Software.ToString().ToLower());
+                if (!lst_Filter.Items.Contains(entries.produced_by))
+                {
+                    lst_Filter.Items.Add(entries.produced_by.ToString().ToLower());
+                }
+                if (!lst_Filter.Items.Contains(entries.most_broad_definition))
+                {
+                    lst_Filter.Items.Add(entries.most_broad_definition.ToString().ToLower());
+                }
+                if (!lst_Filter.Items.Contains(entries.verb))
+                {
+                    lst_Filter.Items.Add(entries.verb.ToString().ToLower());
+                }
 
-            for (int i = 1; i < ReadingFile.Length; i++)
-            {
-                MTerms Terms = new MTerms(ReadingFile[i], i);
-                termsList.Add(Terms);
-                lst_Filter.Items.Add(termsList[i-1].ToString().ToLower());
             }
-
-            //private void lst_Attributes_SelectionChanged(object sender, SelectionChangedEventArgs e)
-            // {
 
         }
-
         private void lst_Filter_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            
-           
-            if (lst_Terms.Items.Contains(lst_Filter.SelectedItem))//checks to see if the item being selected is already in the list of sorted items
-                {
-                //Messagebox wasnt working...
-                }
-                else
-                {
-               FilterArray filterArray = new FilterArray();
-                filterArray.Equals(lst_Filter.SelectedItem);
-                lst_Terms.Items.Add(filterArray.ToString());
-               // savedTerms.Add(lst_Filter.SelectedItem.ToString().ToLower());
-               // lst_Terms.Items.Add(savedTerms[lst_Filter.SelectedIndex].ToString().ToLower());
-               
-                   //lst_Filter.SelectedItem.ToString();
-                   //termsList.Add(lst_Filter.SelectedItem.ToString(););
-                   //lst_Terms.Items.Add(movement);
-                }
-
-                 
-        
-            //lst_Filter.Items.Remove(lst_Filter.SelectedItem);
-
+            if (!lst_Terms.Items.Contains(lst_Filter.SelectedItem))//checks to see if the item being selected is already in the list of sorted items
+            {
+                lst_Terms.Items.Add(lst_Filter.SelectedItem);
+            }
         }
-
         private void lst_Terms_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-           
-            lst_Terms.Items.Remove(lst_Terms.SelectedItem);//removes selected item from the terms section.
-            
+            //string remove = lst_Terms.SelectedItem.ToString().ToLower();
+            //lst_Terms.Items.Remove(remove);
         }
-
         private void Search(object sender, MouseEventArgs e)
         {
             txt_FilterTerms.Text = "";
         }
 
-        private void TypeSearch(object sender, TextChangedEventArgs e)
+        private void btn_Search_Click(object sender, RoutedEventArgs e)
         {
-            lst_Filter.Items.Clear();
-            foreach(var listTerms in termsList)
-            {
-                if (listTerms.ToString().ToLower().Contains(txt_FilterTerms.Text))
-                {
-                    lst_Filter.Items.Add(listTerms.ToString().ToLower());
-                }
-            }
-            
+            lst_Softwares.Items.Clear();
+            //if()
         }
     }
 }
+
