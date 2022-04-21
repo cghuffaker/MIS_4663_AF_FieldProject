@@ -22,6 +22,7 @@ namespace American_Fidelity
     public partial class MainWindow : Window
     {
         private List<AmericanFInfo> americanF = new List<AmericanFInfo>();
+        private List<string> trial = new List<string>();
         public MainWindow()
         {
             InitializeComponent();
@@ -34,36 +35,25 @@ namespace American_Fidelity
                 americanF.Add(entries);
 
 
-                lst_Softwares.Items.Add(entries.Software);
+                lst_Softwares.Items.Add(entries);
                 if (!lst_Filter.Items.Contains(entries.produced_by))
                 {
-
-                    lst_Filter.Items.Add(entries.produced_by);
+                    trial.Add(entries.produced_by.Trim());
+                    lst_Filter.Items.Add(entries.produced_by.Trim());
                 }
                 if (!lst_Filter.Items.Contains(entries.most_broad_definition))
                 {
-
-                    lst_Filter.Items.Add(entries.most_broad_definition);
+                    trial.Add(entries.most_broad_definition.Trim());
+                    lst_Filter.Items.Add(entries.most_broad_definition.Trim());
                 }
-                if (!lst_Filter.Items.Contains(entries.verb))
+                if (!lst_Filter.Items.Contains(entries.verb.Trim()))
                 {
-
-                    lst_Filter.Items.Add(entries.verb);
+                    trial.Add(entries.verb.Trim());
+                    lst_Filter.Items.Add(entries.verb.Trim());
                 }
 
             }
 
-        }
-        private void lst_Filter_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (!lst_Terms.Items.Contains(lst_Filter.SelectedItem))//checks to see if the item being selected is already in the list of sorted items
-            {
-                lst_Terms.Items.Add(lst_Filter.SelectedItem);
-            }
-        }
-        private void lst_Terms_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            lst_Terms.Items.Remove(lst_Terms.SelectedItem);
         }
         private void Search(object sender, MouseEventArgs e)
         {
@@ -78,9 +68,9 @@ namespace American_Fidelity
             foreach (var entry in americanF)
             {
                 Boolean check = true;
-                foreach (var term in lst_Terms.Items)
+                foreach (string term in lst_Terms.Items)
                 {
-                    if (entry.produced_by.Contains(term.ToString()) || entry.most_broad_definition.Contains(term.ToString()) || entry.verb.Contains(term.ToString()))
+                    if (!string.IsNullOrEmpty(term) && (entry.produced_by.Contains(term.ToString()) || entry.most_broad_definition.Contains(term.ToString()) || entry.verb.Contains(term.ToString())))
                     {
 
 
@@ -100,13 +90,52 @@ namespace American_Fidelity
                 {
                     if (!lst_Softwares.Items.Contains(entry.Software))
                     {
-                        lst_Softwares.Items.Add(entry.Software);
+                        lst_Softwares.Items.Add(entry);
                     }
                 }
 
             }
 
 
+        }
+
+        private void TypeSearch(object sender, TextChangedEventArgs e)
+        {
+            lst_Filter.Items.Clear();
+
+            foreach (var item in trial)
+            {
+
+
+                if (item.ToString().ToLower().Contains(txt_FilterTerms.Text))
+                {
+
+                    lst_Filter.Items.Add(item.Trim());
+                }
+
+            }
+        }
+        private void selectTerm(object sender, MouseButtonEventArgs e)
+        {
+            if (!lst_Terms.Items.Contains(lst_Filter.SelectedItem))//checks to see if the item being selected is already in the list of sorted items
+            {
+                lst_Terms.Items.Add(lst_Filter.SelectedItem);
+
+            }
+        }
+
+        private void softwareDetail(object sender, MouseButtonEventArgs e)
+        {
+            softwareCom win = new softwareCom();
+            AmericanFInfo select = (AmericanFInfo)lst_Softwares.SelectedItem;
+
+            win.PopulateData(select);
+            win.ShowDialog();
+        }
+
+        private void RemoveTerm(object sender, MouseButtonEventArgs e)
+        {
+            lst_Terms.Items.Remove(lst_Terms.SelectedItem);
         }
     }
 }
