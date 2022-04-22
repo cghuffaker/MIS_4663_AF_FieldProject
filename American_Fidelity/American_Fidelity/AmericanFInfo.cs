@@ -13,8 +13,8 @@ namespace American_Fidelity
         public string most_broad_definition { get; set; }
         public string verb { get; set; }
 
-        public string description { get; set; }
-        public string website { get; set; }
+        public string Description { get; set; }
+        public string Website { get; set; }
 
 
         public AmericanFInfo()
@@ -23,8 +23,8 @@ namespace American_Fidelity
             produced_by = string.Empty;
             most_broad_definition = string.Empty;
             verb = string.Empty;
-            description = string.Empty;
-            website = string.Empty;
+            Description = string.Empty;
+            Website = string.Empty;
         }
         public AmericanFInfo(string type, int LineNum = 0)
         {
@@ -33,8 +33,8 @@ namespace American_Fidelity
             produced_by = term[1];
             most_broad_definition = term[2];
             verb = term[3];
-            description = term[4];
-            website = term[5];
+            Description = term[4];
+            Website = term[5];
 
         }
         public override string ToString()

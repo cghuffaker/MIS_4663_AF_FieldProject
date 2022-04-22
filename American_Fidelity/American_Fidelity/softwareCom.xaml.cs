@@ -33,8 +33,8 @@ namespace American_Fidelity
                 txtSTitle.Text = item.ToString();
             }
 
-            txtDescription.Text = owner.description;
-            txtWebsite.Text = owner.website;
+            txtDescription.Text = owner.Description;
+            txtWebsite.Text = owner.Website;
 
         }
 
